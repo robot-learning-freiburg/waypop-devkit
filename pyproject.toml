@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "waypop-devkit"
+version = "0.1.0"
+description = "Dataset reading, validation evaluation, submission checks, and visualization for WayPOP"
+readme = "README.md"
+license = "GPL-3.0-only"
+license-files = ["LICENSE"]
+requires-python = ">=3.12"
+dependencies = ["numpy>=1.26", "Pillow>=10"]
+
+[project.optional-dependencies]
+eval = ["torch>=2.0", "torchmetrics>=1.4", "scipy>=1.11", "PyYAML>=6", "click>=8", "colorlog>=6", "rich>=13"]
+
+[project.scripts]
+waypop = "waypop_devkit.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+waypop_devkit = ["config/*.yaml", "config/format/*.yaml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

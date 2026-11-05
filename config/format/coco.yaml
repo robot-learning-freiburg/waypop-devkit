@@ -1,0 +1,48 @@
+# COCO panoptic prediction format for WayPOP.
+#
+# data.format:   selects the PredictionLoader (index file structure).
+#                Supported: coco
+#
+# data.encoding: selects the PanopticDecoder (how pixels encode segment IDs).
+#                Supported: coco_rgb_packed (R + G*256 + B*65536)
+#
+# loader:        (optional) loader-specific path overrides (shown with defaults):
+#   index_file:   predictions.json
+#   panoptic_dir: predictions
+#
+# classes:       category_id (int) -> name (str), from predictions.json segments_info.
+#                Names must match classes.yaml for joining.
+
+data:
+  format: coco
+  encoding: coco_rgb_packed
+
+# loader:
+#   index_file: predictions.json
+#   panoptic_dir: predictions
+
+classes:
+  2: car
+  3: truck
+  4: bus
+  5: other_large_vehicle
+  6: bicycle
+  7: motorcycle
+  8: trailer
+  9: pedestrian
+  10: cyclist
+  11: motorcyclist
+  14: construction_cone_pole
+  15: pole
+  16: pedestrian_object
+  17: sign
+  18: traffic_light
+  19: building
+  20: road
+  21: lane_marker
+  22: road_marker
+  23: sidewalk
+  24: vegetation
+  25: sky
+  29: ood
+  255: ood

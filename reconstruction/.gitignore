@@ -1,0 +1,11 @@
+run_outputs/
+.venv-reconstruction/
+tools/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.partial
+*.tfrecord
+*.glb
+waypop_reconstruction_example_val/
+waypop_reconstruction_example_val_*.zip

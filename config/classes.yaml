@@ -1,0 +1,137 @@
+# WayPoP dataset class mapping
+#
+# classes: dataset category_id (int) -> benchmark class name (str)
+#          category_id = decoded RGB24 ID // the sample's panoptic_label_divisor
+
+classes:
+  2: car
+  3: truck
+  4: bus
+  5: other_large_vehicle
+  6: bicycle
+  7: motorcycle
+  8: trailer
+  9: pedestrian
+  10: cyclist
+  11: motorcyclist
+  14: construction_cone_pole
+  15: pole
+  16: pedestrian_object
+  17: sign
+  18: traffic_light
+  19: building
+  20: road
+  21: lane_marker
+  22: road_marker
+  23: sidewalk
+  24: vegetation
+  25: sky
+  29: ood
+
+order:
+  - car
+  - truck
+  - bus
+  - other_large_vehicle
+  - bicycle
+  - motorcycle
+  - trailer
+  - pedestrian
+  - cyclist
+  - motorcyclist
+  - construction_cone_pole
+  - pole
+  - pedestrian_object
+  - sign
+  - traffic_light
+  - building
+  - road
+  - lane_marker
+  - road_marker
+  - sidewalk
+  - vegetation
+  - sky
+  - ood
+  - ignored
+
+ignored:
+  - ignored
+
+things:
+  - car
+  - truck
+  - bus
+  - other_large_vehicle
+  - trailer
+  - pedestrian
+  - cyclist
+  - ood
+
+stuff:
+  - bicycle
+  - motorcycle
+  - motorcyclist
+  - construction_cone_pole
+  - pole
+  - pedestrian_object
+  - sign
+  - traffic_light
+  - building
+  - road
+  - lane_marker
+  - road_marker
+  - sidewalk
+  - vegetation
+  - sky
+
+known:
+  - car
+  - truck
+  - bus
+  - other_large_vehicle
+  - bicycle
+  - motorcycle
+  - trailer
+  - pedestrian
+  - cyclist
+  - motorcyclist
+  - construction_cone_pole
+  - pole
+  - pedestrian_object
+  - sign
+  - traffic_light
+  - building
+  - road
+  - lane_marker
+  - road_marker
+  - sidewalk
+  - vegetation
+  - sky
+
+unknown:
+  - ood
+
+colors:
+  car:                    [0, 0, 142]
+  truck:                  [0, 0, 70]
+  bus:                    [0, 60, 100]
+  other_large_vehicle:    [61, 133, 198]
+  bicycle:                [119, 11, 32]
+  motorcycle:             [0, 0, 230]
+  trailer:                [111, 168, 220]
+  pedestrian:             [220, 20, 60]
+  cyclist:                [255, 0, 0]
+  motorcyclist:           [180, 0, 0]
+  construction_cone_pole: [230, 145, 56]
+  pole:                   [153, 153, 153]
+  pedestrian_object:      [234, 153, 153]
+  sign:                   [246, 178, 107]
+  traffic_light:          [250, 170, 30]
+  building:               [70, 70, 70]
+  road:                   [128, 64, 128]
+  lane_marker:            [234, 209, 220]
+  road_marker:            [217, 210, 233]
+  sidewalk:               [244, 35, 232]
+  vegetation:             [107, 142, 35]
+  sky:                    [70, 130, 180]
+  ood:                    [0, 255, 255]
